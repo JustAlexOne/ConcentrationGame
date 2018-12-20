@@ -45,7 +45,7 @@ class Concentration {
         // TODO: Shuffle the cards
     }
     
-    // nice progressing examples of benefiting the fact, that Card is a struct and gets
+    // nice progressing examples of benefiting the fact, that Card is a struct and gets duplicated each time
     //    init_basic4(numberOfPairsOfCards: Int) {
     //        for identifier in 0...numberOfPairsOfCards {
     //            let card = Card(indetifier: indentifier)
