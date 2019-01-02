@@ -10,8 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    lazy var game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1) / 2)
+    lazy var game = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
     // didSet {} - no, lazy vars can't have didSet methods
+    
+    // the computed property which has only get{} declared, is considered a read-only property
+    var numberOfPairsOfCards: Int {
+        return (cardButtons.count + 1) / 2 // simple way of writing a read-only computed property
+        // you can write this get like this (longer way:
+        //        get {
+        //            return (cardButtons.count + 1) / 2
+        //        }
+    }
     
     var flipCount = 0 { didSet { flipCountLabel.text = "Flips: \(flipCount)" } }
     
