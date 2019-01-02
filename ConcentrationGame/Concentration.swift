@@ -42,7 +42,7 @@ class Concentration {
             let card = Card()
             cards += [card, card]
         }
-        // TODO: Shuffle the cards bro
+        cards.shuffle()
     }
     
     // nice progressing examples of benefiting the fact, that Card is a struct and gets duplicated each time
